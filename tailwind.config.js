@@ -3,18 +3,23 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      colors: {
+        accent: "#BD2E37",
+      },
       fontFamily: {
-        openSans: ["OpenSans", "ui-sans-serif", "system-ui"],
-        "openSans-condensed": [
-          "OpenSans_Condensed",
-          "ui-sans-serif",
-          "system-ui",
-        ],
-        "openSans-semiCondensed": [
-          "OpenSans_SemiCondensed",
-          "ui-sans-serif",
-          "system-ui",
-        ],
+        fontFamily: {
+          "open-sans": ["OpenSans", "ui-sans-serif", "system-ui"],
+          "open-sans-condensed": [
+            "OpenSansCondensed",
+            "ui-sans-serif",
+            "system-ui",
+          ],
+          "open-sans-semicondensed": [
+            "OpenSansSemiCondensed",
+            "ui-sans-serif",
+            "system-ui",
+          ],
+        },
       },
     },
   },
