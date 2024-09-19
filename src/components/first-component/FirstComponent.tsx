@@ -8,9 +8,9 @@ import thirdImage from "../../assets/images/component-01/Image-03.jpg";
 export const FirstComponent: React.FC = () => {
   return (
     <Section>
-      <div className="flex flex-col md:flex-row justify-center items-stretch gap-4 w-full">
+      <div className="flex flex-col lg:flex-row justify-center items-stretch gap-4 w-full">
         {/* First Child: Image Grid */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full md:w-8/12">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full lg:w-8/12">
           <div className="col-span-1 row-span-2">
             <img
               src={firstImage}
@@ -35,7 +35,7 @@ export const FirstComponent: React.FC = () => {
         </div>
 
         {/* Second Child: Text Content */}
-        <div className="flex flex-col gap-4 items-start w-full md:w-4/12">
+        <div className="flex flex-col gap-4 items-start w-full lg:w-4/12">
           <h2 className="py-2 border-b-2 border-b-white font-openSans font-light">
             ANSWER YOUR BODY'S NEEDS
           </h2>
