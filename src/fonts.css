@@ -1,0 +1,58 @@
+/*
+  Declaring the fonts needed for the project.
+*/
+
+/* OpenSans */
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assets/fonts/OpenSans/OpenSans-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assets/fonts/OpenSans/OpenSans-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* OpenSans Condensed */
+@font-face {
+  font-family: "OpenSans_Condensed";
+  src: url("./assets/fonts/OpenSans_Condensed/OpenSans_Condensed-Regular.ttf")
+    format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans_Condensed";
+  src: url("./assets/fonts/OpenSans_Condensed/OpenSans_Condensed-Bold.ttf")
+    format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* OpenSans SemiCondensed */
+@font-face {
+  font-family: "OpenSans_SemiCondensed";
+  src: url("./assets/fonts/OpenSans_SemiCondensed/OpenSans_SemiCondensed-Regular.ttf")
+    format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans_SemiCondensed";
+  src: url("./assets/fonts/OpenSans_SemiCondensed/OpenSans_SemiCondensed-Bold.ttf")
+    format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
