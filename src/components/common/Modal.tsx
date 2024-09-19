@@ -8,6 +8,9 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+  // Although the instructions ask for a modal that displays the image
+  // I created this Modal to accept its contents as children so that it can be used for other purposes
+
   // Close the modal when the Escape key is pressed
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
