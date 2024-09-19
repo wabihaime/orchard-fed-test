@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Section } from "../common";
 
-import firstImage from "../../assets/images/component-01/Image-01.jpg";
-import secondImage from "../../assets/images/component-01/Image-02.jpg";
-import thirdImage from "../../assets/images/component-01/Image-03.jpg";
 import Modal from "../common/Modal";
+import { images } from "./images";
+import { ImageData } from "./interface";
 
 export const FirstComponent: React.FC = () => {
-  // State to manage the selected image for the modal
+  // State to manage the selected image for the modal and the modal open/close state
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
@@ -42,30 +41,19 @@ export const FirstComponent: React.FC = () => {
         <div className="flex flex-col lg:flex-row justify-center items-stretch gap-4 w-full">
           {/* First Child: Image Grid */}
           <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full lg:w-8/12">
-            <div className="col-span-1 row-span-2">
-              <img
-                src={firstImage}
-                alt="First"
-                className="w-full h-full object-cover"
-                onClick={() => openModal(firstImage, "First Image")}
-              />
-            </div>
-            <div className="col-span-1 row-span-1">
-              <img
-                src={secondImage}
-                alt="Second"
-                className="w-full h-full object-cover"
-                onClick={() => openModal(secondImage, "Second Image")}
-              />
-            </div>
-            <div className="col-span-1 row-span-1">
-              <img
-                src={thirdImage}
-                alt="Third"
-                className="w-full h-full object-cover"
-                onClick={() => openModal(thirdImage, "Third Image")}
-              />
-            </div>
+            {images.map((image: ImageData, index: number) => (
+              <div
+                key={`${index}`}
+                className={`col-span-${image.colSpan} row-span-${image.rowSpan}`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover cursor-pointer"
+                  onClick={() => openModal(image.src, image.alt)}
+                />
+              </div>
+            ))}
           </div>
 
           {/* Second Child: Text Content */}
